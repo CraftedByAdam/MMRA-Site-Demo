@@ -308,12 +308,11 @@ html {
     }
 
     .nav-links {
-        flex-direction: column;
         display: flex;
-        align-items: center;
-        justify-content: center; 
+        flex-direction: column; /* Stack them like a tower! */
+        align-items: center;    /* Center the tower in the middle */
+        gap: 15px;             /* Put a little breathing room between each link */
         list-style: none;
-        gap: 15px;
         padding: 0;
     }
 
