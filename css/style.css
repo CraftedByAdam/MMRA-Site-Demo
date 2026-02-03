@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px #444;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1rem;
+  font-family: "Cutive Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+#nav-site-name {
+    font-family: "Cutive Mono", monospace;
+    font-size: 25px;
+    color: #aaa;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+#nav-site-name:hover {
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.site-title {
+    font-family: "Lora", serif;
+    font-size: 60px;
+    text-align: center;
+    color: cornsilk;
+    border-bottom: 2px solid #333;
+}
+
+#h2-collection {
+    font-family: "Cutive Mono", monospace;
+    font-size: 50px;
+    color: #ff4d4d;
+    text-align: center;
+    /*border-bottom: 2px solid #333;*/
+}
+
+.content-section {
+    align-items: center;
+    justify-content: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    margin-left: 110px;
+    gap: 20;
+    align-items: center;
+}
+
+.product-card {
+    background: #222;
+    border: 2px solid #444;
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    transform: 0.3s ease, border 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border: 1px solid #ff4d4d;
+    transition: 0.1s ease;
+    border-width: 2px;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.item-name {
+    font-family: "Cutive Mono", monospace;
+}
+
+.item-price {
+    font-family: "Cutive Mono", monospace;
+    font-size: 20px;
+    color: #ff4d4d;
+}
+
+.view-btn {
+    font-family: "Cutive Mono", monospace;
+    font-size: 20px;
+    border: 2px solid #aaa;
+    background: transparent;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+}
+
+.view-btn:hover {
+    cursor: pointer;
+    color: #222;
+    background: #aaa;
+    transition: 0.3s ease;
+}
+
+.view-btn:active {
+    background: #333;
+    color: #aaa;
+    transition: 0.1s ease;
+}
+
+.full-collection {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.view-collection-btn {
+    border: solid;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    font-family: "Cutive Mono", monospace;
+    font-size: 25px;
+    background-color: transparent;
+    border-color: #aaa;
+    color: #f4f4f4;
+    margin-top: 50px;
+}
+
+.view-collection-btn:hover {
+    cursor: pointer;
+    color: #222;
+    background: #aaa;
+    transition: 0.3s ease;
+}
+
+.view-collection-btn:active {
+    background: #333;
+    color: #aaa;
+    transition: 0.1s ease;
+}
+
+/* Big Pop up Card */
+
+.big-card-container {
+    background-color: #444;
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px; 
+    height: auto;
+    border: 2px solid #555;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 2px solid #aaa;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    justify-content: right;
+    background: transparent;
+    color: #f4f4f4;
+    border: none;
+    font-size: 35px;
+    padding: 0;
+}
+
+.close-btn:hover {
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.close-btn:active {
+    color: #ff4d4d;
+    transform: translateY(1px);
+}
+
+#big-card-img {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+}
+
+.big-card-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    
+}
+
+.big-card-h3 {
+    font-family: "Buda", serif;
+    font-size: 50px;
+    color: #f4f4f4;
+    border-bottom: 3px solid #555;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#big-card-price {
+    font-family: "Cutive Mono", monospace;
+    font-size: 30px;
+    color: #ff4d4d;
+}
+
+.big-card-p {
+    font-family: "Cutive Mono", monospace;
+    font-size: 17px;
+    color: #aaa;
+    width: 100%;
+    max-width: 310px;
+    text-align:start;
+}
+
+.big-card-list {
+    font-size: 13px;
+    font-family: "Cutive Mono", monospace;
+    color: #f4f4f4;
+    text-align: left;
+    width: 220px;
+    height: auto;
+    list-style-type: none;
+    
+}
+
+@media (max-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+        justify-items: center;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .site-title {
+        font-size: 40px;
+    }
+
+    #h2-collection {
+        font-size: 25px;
+    }
+
+    /* Pop up card */
+    .big-card-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center; 
+    }
+
+    #big-card-img {
+        max-width: 250px;
+    }
+
+    .big-card-info {
+        align-items: center;
+    }
+
+    .big-card-h3 {
+        width: 100%;
+        font-size: 35px;
+    }
+}
