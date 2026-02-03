@@ -293,10 +293,6 @@ html {
 
 @media (max-width: 768px) {
 
-    html {
-  scroll-behavior: smooth;
-    }
-
     .product-grid {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
