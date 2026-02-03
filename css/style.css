@@ -58,6 +58,11 @@ html {
     cursor: pointer;
 }
 
+.nav-bar-instagram-logo a {
+    text-decoration: none;
+    color: #aaa;
+}
+
 #nav-site-name {
     font-family: "Cutive Mono", monospace;
     font-size: 25px;
