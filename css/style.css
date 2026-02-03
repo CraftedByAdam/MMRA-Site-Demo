@@ -355,6 +355,7 @@ html {
         cursor: pointer;
         background-color: transparent;
         border: none;
+        border: transparent;
     }
 
     .nav-links.active {
