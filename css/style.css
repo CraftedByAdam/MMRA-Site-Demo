@@ -21,6 +21,17 @@ html {
     border-bottom: 1px #444;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-middle {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links {
     display: flex;
     justify-content: center; /* Centers the links horizontally */
@@ -48,6 +59,10 @@ html {
 
 .mobile-menu-icon {
     display: none;;
+}
+
+.nav-bar-instagram-logo i {
+    color: #aaa !important; 
 }
 
 .nav-bar-instagram-logo {
