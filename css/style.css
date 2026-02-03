@@ -308,7 +308,13 @@ html {
     }
 
     .nav-links {
-        flex-direction: row;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        list-style: none;
+        gap: 15px;
+        padding: 0;
     }
 
     .nav-links a {
