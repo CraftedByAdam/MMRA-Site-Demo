@@ -356,6 +356,10 @@ html {
         background-color: transparent;
     }
 
+    .nav-links.active {
+        display: flex;
+    }
+
     .hero-section {
         margin-top: 170px;
     }
