@@ -58,6 +58,10 @@ html {
     cursor: pointer;
 }
 
+.nav-bar-instagram-logo:visited {
+    color: #aaa;
+}
+
 .nav-bar-instagram-logo a {
     text-decoration: none;
     color: #aaa;
