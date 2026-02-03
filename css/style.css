@@ -329,7 +329,7 @@ html {
 
     .navbar {
         justify-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
         position: fixed;
         max-width: 100%;
         height: auto;
@@ -337,9 +337,9 @@ html {
 
     .nav-links {
         display: none;
-        flex-direction: column; /* Stack them like a tower! */
-        align-items: center;    /* Center the tower in the middle */
-        gap: 15px;             /* Put a little breathing room between each link */
+        flex-direction: column; 
+        align-items: center;   
+        gap: 15px;           
         list-style: none;
         padding: 0;
     }
@@ -353,9 +353,9 @@ html {
         font-size: 30px;
         color: #aaa;
         cursor: pointer;
-        background-color: transparent;
+        background: transparent;
         border: none;
-        border: transparent;
+        outline: none;
     }
 
     .nav-links.active {
@@ -363,7 +363,7 @@ html {
     }
 
     .hero-section {
-        margin-top: 170px;
+        margin-top: 80px;
     }
 
     .site-title {
