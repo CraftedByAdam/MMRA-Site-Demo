@@ -8,8 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 /* .navbar {
     width: 100%;
     display: flex;
@@ -28,6 +26,11 @@ html {
     justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background-color: #1a1a1a;
+    z-index: 1000;
 }
 
 .nav-left, .nav-right {
@@ -357,12 +360,25 @@ html {
         justify-items: center;
     }
 
-    .navbar {
+    /*.navbar {
         justify-content: space-between;
         flex-direction: row;
         position: fixed;
         max-width: 100%;
         height: auto;
+    }*/
+
+    .navbar {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        background-color: #1a1a1a;
+        z-index: 1000;
+        max-width: 100%;
     }
 
     .nav-links {
