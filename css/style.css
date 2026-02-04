@@ -438,13 +438,14 @@ html {
     }
 
     .hero-section {
-        margin-top: 200px;
+        margin-top: 80px;
     }
 
     .site-title {
         font-size: 40px;
         width: 100%;
         display: block;
+        padding: 0 10px;
     }
 
     #h2-collection {
