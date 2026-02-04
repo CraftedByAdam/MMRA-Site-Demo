@@ -8,7 +8,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.navbar {
+
+
+/* .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -19,17 +21,30 @@ html {
     top: 0;
     z-index: 1000;
     border-bottom: 1px #444;
+}*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.nav-left {
+.nav-left, .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+.nav-right {
+    justify-content: flex-end;
+}
+
 .nav-middle {
+    flex: 2;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-links {
@@ -78,7 +93,7 @@ html {
 }
 
 .nav-bar-instagram-logo:visited {
-    color: #aaa;
+    color: #ff4d4d;
 }
 
 .nav-bar-instagram-logo a {
