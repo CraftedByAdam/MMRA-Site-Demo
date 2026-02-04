@@ -448,6 +448,22 @@ html {
     }
 }
 
+@media (hover: hover) {
+    .view-btn:hover {
+        cursor: pointer;
+        color: #222;
+        background: #aaa;
+        transition: 0.3s ease;
+    }
+
+    .view-collection-btn:hover {
+        cursor: pointer;
+        color: #222;
+        background: #aaa;
+        transition: 0.3s ease;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
