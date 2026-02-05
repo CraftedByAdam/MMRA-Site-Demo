@@ -239,15 +239,17 @@ html {
     font-family: "Cutive Mono", monospace;
     font-size: 25px;
     background-color: transparent;
+    text-decoration: none;
     border-color: #aaa;
     color: #f4f4f4;
     margin-top: 50px;
+    transition: 0.5s ease
 }
 
 .view-collection-btn:hover {
     cursor: pointer;
     color: #222;
-    background: #aaa;
+    background-color: transparent;
     transition: 0.3s ease;
 }
 
@@ -353,7 +355,19 @@ html {
     max-width: 220px;
     height: auto;
     list-style-type: none;
-    
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: #aaa;
+    font-family: "Cutive Mono", monospace;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {
