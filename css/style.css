@@ -437,7 +437,10 @@ html {
     }
 
     .hero-section {
-        margin-top: 80px;
+        display: flex;
+        justify-content:Center;
+        align-items: flex-start;
+        padding-top: 30px;
     }
 
     .site-title {
