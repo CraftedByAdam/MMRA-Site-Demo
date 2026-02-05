@@ -451,11 +451,7 @@ html {
     }
 
     #h2-collection {
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;       
+        font-size: 25px;     
     }
 
     /* Pop up card */
