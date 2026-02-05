@@ -14,18 +14,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <section class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or inquiries, feel free to reach out to us!</p>
-            <input type="text" placeholder="Full Name" class="contact-input">
-            <input type="email" placeholder="Email Address" class="contact-input">
-            <textarea placeholder="Message" class="contact-textarea"></textarea>
-            <button type="button" class="contact-submit-btn">Contact Us</button>
+
+    <nav class="navbar">
+        <!-- Bucket 1: Left-->
+        <div class="nav-left">
+            <p><a href="index.html" id="nav-site-name">MMRA</a></p>
         </div>
 
+        <!-- Bucket 2: middle (Desktop only)-->
+        <div class="nav-middle">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="" class="nav-bar-list" >About us</a></li>
+                <li><a href="contact.html"class="nav-bar-list">Contact us</a></li>
+            </ul>
+        </div>
 
+        <!-- Bucket 3: Right -->
+        <div class="nav-right">
+            <a href="https://www.instagram.com/mm_restorative_arts/" class="nav-bar-instagram-logo" target="_blank">
+            <i class="fab fa-instagram"></i> 
+        </a>
+            <button type="button" class="mobile-menu-icon"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="" class="nav-bar-list" >About us</a></li>
+                <li><a href=""class="nav-bar-list">Contact us</a></li>
+            </ul>
+            <button type="button" class="mobile-menu-icon"><i class="fa-solid fa-bars"></i></button>
+        </div>-->
+    </nav>
+    
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-imgage">
+                <!--<img src="assets/images/MMRA-ContactUs-img.avif" alt="old phone pictur for contact us page" class="contact-us-img">-->
+            </div>
+
+            <form class="contact-form" id="my-form">
+                <h2 class="h2-contact">Get in Touch</h2>
+                
+                <input type="text" name="name" placeholder="Full Name" class="contact-input" required>
+                <input type="email" name="email" placeholder="Email Address" class="contact-input" required>
+
+                <textarea name="message" placeholder="Message" class="contact-textarea" required></textarea>
+
+                <button type="submit" class="contact-submit-btn">Submit</button>
+            </form>
+        </div>
     </section>
+
     <script src="js/script.js" defer></script>
 
     <footer class="footer">

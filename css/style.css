@@ -357,8 +357,6 @@ html {
     list-style-type: none;
 }
 
-
-
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -369,6 +367,95 @@ html {
     border-top: 1px solid #444;
     margin-top: 40px;
 }
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding:  20px;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.h2-contact {
+    font-family: "Cutive Mono", monospace;
+    font-size: 40px;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.contact-image, .contact-form {
+    flex: 1;
+}
+
+/*.contact-us-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-right: auto;
+    padding: 0 5px;
+    margin-top: 200px;
+    margin-bottom: 130px;
+}*/
+
+.contact-input {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f4f4f4;
+    flex-direction: row;
+}
+
+.contact-textarea {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+.contact-submit-btn {
+    font-family: "Cutive Mono", monospace;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: transparent;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+}
+
+.contact-submit-btn:hover {
+    cursor: pointer;
+    color: #222;
+    background: #aaa;
+    transition: 0.3s ease;
+}
+
+.contact-submit-btn:active {
+    background: #333;
+    color: #aaa;
+    transition: 0.1s ease;
+}   
 
 @media (max-width: 768px) {
 
