@@ -457,12 +457,7 @@ html {
     transition: 0.1s ease;
 }   
 
-.hidden-message {
-    font-family: "Cutive Mono", monospace;
-    margin-top: 20px;
-    font-size: 16px;
-    height: 20px; /* Reserves space so the layout doesn't jump */
-}
+
 
 @media (max-width: 768px) {
 
