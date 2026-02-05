@@ -1,18 +1,36 @@
-const menuBtn = document.querySelector('.moble-menue-icon');
-const navLinks = document.querySelector('.nav-links');
+const form = document.getElementById('my-form');
+const status = document.getElementById('form-status');
+const btn = document.getElementById('submit-btn');
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-menu-open');
-}); 
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-//const menuBtn = document.querySelector('.mobile-menu-icon');
-//const navLinks = document.querySelector('.nav-links');
+    // 1. Change button text so the user knows it's working
+    btn.innerText = "Sending...";
+    btn.disabled = true; // Stop them from clicking twice
 
-//console.log("Button found:", menuBtn); // If this says 'null', your JS can't find the button
-//console.log("Links found:", navLinks); // If this says 'null', your JS can't find the menu
-
-//menuBtn.addEventListener('click', () => {
-//    console.log("Button was clicked!"); // If this doesn't show up in the console when you click, the click isn't registering.
-//    navLinks.classList.toggle('active');
-//});
+    const formData = new FormData(form);
+    
+    fetch("https://formsubmit.co/ajax/your-email@email.com", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // 2. Success! Change the div text and color
+            status.innerText = "Thank you! We'll get back to you soon.";
+            status.style.color = "#4BB543"; // Success Green
+            form.reset(); 
+            btn.innerText = "Contact Us";
+            btn.disabled = false;
+        } else {
+            status.innerText = "Oops! There was a problem.";
+            status.style.color = "#ff4d4d"; // Error Red
+        }
+    })
+    .catch(error => {
+        status.innerText = "Check your internet connection.";
+        status.style.color = "orange";
+    });
+});
 
