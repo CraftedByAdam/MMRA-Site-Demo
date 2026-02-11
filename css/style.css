@@ -513,15 +513,37 @@ html {
 
     .nav-links {
         display: none;
-        flex-direction: column; 
-        align-items: center;   
-        gap: 15px;           
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
         list-style: none;
-        padding: 0;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%; /* below navbar */
+        left: 0;
+        width: 100vw;
+        background: #222;
+        border-top: 2px solid #444;
+        border-bottom: 2px solid #444;
+        z-index: 1500;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .nav-links a {
         font-size: 15px;
+        color: #f4f4f4;
+        padding: 10px 0;
+        width: 100vw;
+        text-align: center;
+        border-bottom: 1px solid #444;
+        background: transparent;
+    }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+    .nav-links a:hover {
+        background: #333;
+        color: #ff4d4d;
     }
 
     .mobile-menu-icon {
