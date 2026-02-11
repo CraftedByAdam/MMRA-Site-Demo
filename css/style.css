@@ -1,3 +1,47 @@
+/* Popup image gallery thumbnails */
+.big-card-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 10px 0;
+    flex-wrap: wrap;
+}
+.big-card-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border 0.2s, transform 0.2s;
+    background: #222;
+}
+.big-card-thumb:hover {
+    border: 2px solid #ff4d4d;
+    transform: scale(1.08);
+}
+    /* Popup card mobile improvements */
+    .big-card-container {
+        max-width: 98vw;
+        min-width: 0;
+        width: 98vw;
+        padding: 10px 2vw;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .big-card-gallery {
+        gap: 6px;
+        margin: 10px 0 6px 0;
+    }
+    .big-card-thumb {
+        width: 40px;
+        height: 40px;
+    }
+    #big-card-img {
+        max-width: 90vw;
+        height: auto;
+    }
 * {
     box-sizing: border-box;
 }

@@ -41,11 +41,30 @@ function createBigCard(product) {
 	closeBtn.setAttribute('aria-label', 'Close');
 	closeBtn.onclick = () => document.body.removeChild(overlay);
 
-	// Product image
+
+	// Main product image
 	const img = document.createElement('img');
 	img.id = 'big-card-img';
 	img.src = product.img;
 	img.alt = product.name;
+
+	// --- Image gallery thumbnails ---
+	// If product.gallery exists and has images, show them as thumbnails
+	let galleryDiv = null;
+	if (product.gallery && product.gallery.length > 0) {
+		galleryDiv = document.createElement('div');
+		galleryDiv.className = 'big-card-gallery';
+		product.gallery.forEach(galleryImgSrc => {
+			const thumb = document.createElement('img');
+			thumb.className = 'big-card-thumb';
+			thumb.src = galleryImgSrc;
+			thumb.alt = product.name + ' angle';
+			thumb.onclick = () => {
+				img.src = galleryImgSrc;
+			};
+			galleryDiv.appendChild(thumb);
+		});
+	}
 
 	// Info section
 	const info = document.createElement('div');
@@ -81,9 +100,11 @@ function createBigCard(product) {
 	info.appendChild(price);
 	info.appendChild(desc);
 
+
 	// Add everything to card
 	card.appendChild(closeBtn);
 	card.appendChild(img);
+	if (galleryDiv) card.appendChild(galleryDiv);
 	card.appendChild(info);
 
 	// Add card to overlay
@@ -95,7 +116,7 @@ function createBigCard(product) {
 
 // Find all product cards and add click event to their buttons
 const productCards = document.querySelectorAll('.product-card');
-productCards.forEach(card => {
+productCards.forEach((card, idx) => {
 	const btn = card.querySelector('.view-btn');
 	if (btn) {
 		btn.addEventListener('click', () => {
@@ -103,7 +124,35 @@ productCards.forEach(card => {
 			const img = card.querySelector('.product-img');
 			const name = card.querySelector('.item-name');
 			const price = card.querySelector('.item-price');
-			// You can customize this description/facts as needed
+			// Example: Each product gets its own gallery array
+			// You can customize these arrays for each product
+			const galleries = [
+				[
+					'assets/images/AnatomicalHeadModels1.jpeg',
+					'assets/images/AnatomicalHeadModels2.jpeg',
+					'assets/images/AnatomicalHeadModels3.jpeg'
+				],
+				[
+					'assets/images/AnatomicalHeadModels2.jpeg',
+					'assets/images/AnatomicalHeadModels1.jpeg',
+					'assets/images/AnatomicalHeadModels3.jpeg'
+				],
+				[
+					'assets/images/AnatomicalHeadModels3.jpeg',
+					'assets/images/AnatomicalHeadModels1.jpeg',
+					'assets/images/AnatomicalHeadModels2.jpeg'
+				],
+				[
+					'assets/images/AnatomicalHeadModels4.jpeg',
+					'assets/images/AnatomicalHeadModels1.jpeg',
+					'assets/images/AnatomicalHeadModels2.jpeg'
+				],
+				[
+					'assets/images/AnatomicalHeadModels5.jpeg',
+					'assets/images/AnatomicalHeadModels1.jpeg',
+					'assets/images/AnatomicalHeadModels2.jpeg'
+				]
+			];
 			const desc = 'A hand-finished, high detail Anatomical Head. This piece captures every fine detail of the human form, preserved in gallery grade plaster.';
 			const facts = [
 				'Made in USA',
@@ -116,7 +165,8 @@ productCards.forEach(card => {
 				name: name ? name.textContent : '',
 				price: price ? price.textContent : '',
 				desc,
-				facts
+				facts,
+				gallery: galleries[idx] || []
 			});
 		});
 	}
